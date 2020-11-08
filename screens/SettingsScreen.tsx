@@ -2,45 +2,22 @@ import * as React from 'react';
 import {StyleSheet} from 'react-native';
 
 import {Text, View} from '../components/Themed';
-import ToggleSwitch from "../components/settings/toggle_switch";
 
 export default function SettingsScreen() {
   return (
-      <View style={styles.main_container}>
-        <View style={styles.heading_container}>
-          <Text style={styles.title}>Settings</Text>
-          <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)"/>
-        </View>
-        <View style={styles.body_container}>
-          <Text style={styles.body}>This page will have app settings</Text>
-          <View style={styles.switch_container}>
-            <ToggleSwitch/>
-          </View>
-          <Text style={styles.body}> Default Scanner to Camera On</Text>
-        </View>
+      <View style={styles.container}>
+        <Text style={styles.title}>Settings</Text>
+        <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)"/>
+        <Text style={styles.body}>This page will have app settings</Text>
       </View>
-
   );
 }
 
 const styles = StyleSheet.create({
-  main_container: {
+  container: {
     flex: 1,
-  },
-  switch_container: {
-    flexWrap: 'wrap',
-    width: 100,
-  },
-  heading_container: {
-    flex: 1,
-    height: 100,
     alignItems: 'center',
-    justifyContent: 'flex-start',
-  },
-  body_container: {
-    flex: 5,
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
   },
   title: {
     fontSize: 20,
@@ -48,6 +25,7 @@ const styles = StyleSheet.create({
   },
   body: {
     fontSize: 14,
+    justifyContent: 'center',
   },
   separator: {
     marginVertical: 30,
